@@ -15,6 +15,7 @@ def test_multiply():
 
 def test_divide():
     assert divide(10, 5) == 2
+    print(divide(10, 0))  # This will print the error message for division by zero
 
 
 def test_modulus():
