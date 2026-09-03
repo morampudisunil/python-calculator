@@ -1,3 +1,6 @@
+import math
+
+
 def add(a, b):
     return a + b
 
@@ -16,29 +19,54 @@ def divide(a, b):
     return a / b
 
 
-# New Feature
 def modulus(a, b):
+    if b == 0:
+        return "Error: Cannot take modulus by zero"
     return a % b
 
+
 def square(a):
-    return a * a
+    return a ** 2
+
+
 def squareroot(a):
     if a < 0:
         return "Error: Cannot take square root of negative number"
-    return a ** 0.5
+    return math.sqrt(a)
+
+
 def power(a, b):
     return a ** b
 
 
-# Sample calculations
-a = 10
-b = 5
+OPERATIONS = {
+    "1": ("Addition", add),
+    "2": ("Subtraction", subtract),
+    "3": ("Multiplication", multiply),
+    "4": ("Division", divide),
+    "5": ("Modulus", modulus),
+    "6": ("Square", square),
+    "7": ("Square Root", squareroot),
+    "8": ("Power", power),
+}
 
-print("Addition:", add(a, b))
-print("Subtraction:", subtract(a, b))
-print("Multiplication:", multiply(a, b))
-print("Division:", divide(a, b))
-print("Modulus:", modulus(a, b))
-print("Square:", square(a))
-print("Square Root:", squareroot(a))
-print("Power:", power(a, b))
+
+def print_calculator():
+    print("Welcome to the Python Calculator!")
+    print("Available operations:")
+    for number, (name, _) in OPERATIONS.items():
+        print(f"{number}. {name}")
+
+
+def main():
+    print_calculator()
+    a = 10
+    b = 5
+    print("\nSample calculations:")
+    for name, operation in OPERATIONS.values():
+        value = operation(a) if name in {"Square", "Square Root"} else operation(a, b)
+        print(f"{name}: {value}")
+
+
+if __name__ == "__main__":
+    main()

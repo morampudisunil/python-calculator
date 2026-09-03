@@ -25,5 +25,5 @@ def test_squareroot():
     assert squareroot(10) == 3.1622776601683795
 def test_power():
     assert power(10, 5) == 100000
-
+    
 print("All tests passed")
