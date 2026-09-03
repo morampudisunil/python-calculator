@@ -16,6 +16,11 @@ def divide(a, b):
     return a / b
 
 
+# New Feature
+def modulus(a, b):
+    return a % b
+
+
 # Sample calculations
 a = 10
 b = 5
@@ -24,3 +29,4 @@ print("Addition:", add(a, b))
 print("Subtraction:", subtract(a, b))
 print("Multiplication:", multiply(a, b))
 print("Division:", divide(a, b))
+print("Modulus:", modulus(a, b))
