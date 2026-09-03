@@ -20,6 +20,9 @@ def divide(a, b):
 def modulus(a, b):
     return a % b
 
+def square(a):
+    return a * a
+
 
 # Sample calculations
 a = 10
@@ -30,3 +33,4 @@ print("Subtraction:", subtract(a, b))
 print("Multiplication:", multiply(a, b))
 print("Division:", divide(a, b))
 print("Modulus:", modulus(a, b))
+print("Square:", square(a))
