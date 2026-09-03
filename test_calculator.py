@@ -1,4 +1,4 @@
-from calculator import add, subtract, multiply, divide, modulus
+from calculator import add, subtract, multiply, divide, modulus, square, squareroot, power
 
 
 def test_add():
@@ -19,6 +19,11 @@ def test_divide():
 
 def test_modulus():
     assert modulus(10, 5) == 0
-
+def test_square():
+    assert square(10) == 100    
+def test_squareroot():
+    assert squareroot(10) == 3.1622776601683795
+def test_power():
+    assert power(10, 5) == 100000
 
 print("All tests passed")

@@ -26,6 +26,8 @@ def squareroot(a):
     if a < 0:
         return "Error: Cannot take square root of negative number"
     return a ** 0.5
+def power(a, b):
+    return a ** b
 
 
 # Sample calculations
@@ -39,3 +41,4 @@ print("Division:", divide(a, b))
 print("Modulus:", modulus(a, b))
 print("Square:", square(a))
 print("Square Root:", squareroot(a))
+print("Power:", power(a, b))
