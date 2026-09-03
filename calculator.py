@@ -1,4 +1,5 @@
 import math
+print("HI")
 
 
 def add(a, b):
