@@ -5,7 +5,6 @@ print("Sunil")
 
 def add(a, b):
     return a + b
-fdsbfgddh
 
 def subtract(a, b):
     return a - b
